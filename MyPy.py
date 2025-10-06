@@ -56,6 +56,8 @@ print("String to float:", num_float, type(num_float))
 # Boolean and casting example
 print("bool(0):", bool(0))
 print("bool('hello'):", bool("hello"))
+print("bool(''):", bool(''))   
+
 
 print("\nAll basic types and operations executed successfully")
 
