@@ -7,7 +7,13 @@ print("=== BMI CALCULATOR WITH AGE ===")
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 weight = float(input("Enter your weight in kilograms: "))
+if weight < 0:
+    print('Weight cannot be negative. Must've been a misteak: switched to a positive number')
+    weight = abs(weight)
 height = float(input("Enter your height in meters: "))
+if height < 0:
+    print('Height cannot be negative. Must've been a misteak: switched to a positive number')
+    height = abs(weight)
 
 # BMI formula: weight / height^2
 bmi = weight / (height ** 2)
