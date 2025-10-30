@@ -1,4 +1,10 @@
-def cut_rod(prices, n):
+def cut_rod(prices, n):                                          # Added description of the function and optimized overall styling
+    """Return Max value number and recommended length.
+
+    This function determines the maximum
+    value obtainable by cutting up the
+    rod and selling the pieces
+    """
     dp = [0] * (n + 1)
     cuts = [0] * (n + 1)
 
@@ -10,8 +16,8 @@ def cut_rod(prices, n):
                 if value > max_val:
                     max_val = value
                     cuts[length] = cut
-        dp[length] = max_val  
-    
+        dp[length] = max_val
+
     res = []
     length = n
     while length > 0:
@@ -23,6 +29,7 @@ def cut_rod(prices, n):
 
 prices = [1, 5, 8, 9, 10, 17, 17, 20]
 n = 8
+
 max_profit, cuts = cut_rod(prices, n)
 print("Maximum value:", max_profit)
 print("Recommended lengths:", cuts)
